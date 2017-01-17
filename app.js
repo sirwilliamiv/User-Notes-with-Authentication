@@ -76,9 +76,11 @@ app.controller('NotesCtrl', function($scope,$http){
   $scope.addToTheList = function(){
     $scope.savedNote.push($scope.newNote)
   }
-
   $scope.savedNote =[]
-  // }successCallback, errorCallback);
+  $scope.deleteThis = function() {
+
+  }
+
 
 
 })
