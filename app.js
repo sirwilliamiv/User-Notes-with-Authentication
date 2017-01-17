@@ -76,10 +76,18 @@ app.controller('NotesCtrl', function($scope,$http){
   $scope.addToTheList = function(){
     $scope.savedNote.push($scope.newNote)
   }
-  $scope.savedNote =[]
-  $scope.deleteThis = function() {
+  $scope.savedNote = []
+  $scope.bigDelete= function(value) {
+    if($scope.savedNote.includes(value)) {
+      var index = $scope.savedNote.indexOf(value)
+      $scope.savedNote.splice(index, 1)
+    }
 
   }
+
+  // $scope.deleteThis = function(bigDelete) {
+  //    var domMissle = $scope.savedNote.filter(bigDelete)
+  // }
 
 
 

@@ -4,7 +4,7 @@
 <input ng-model="newNote" type="textarea" rows="10" columns="50" name="notes" placeholder="New Note">
 <button ng-click="addToTheList()">Save</button>
 <ul>
-  <li ng-repeat="saved in savedNote">{{saved}} <input ng-click="deleteThis()"type="button" value="Delete"></li>
+  <li " ng-repeat="saved in savedNote">{{saved}} <input ng-click="bigDelete(saved)"type="button" value="Delete"></li>
 </ul>
 
 <a href="#/login">Back to Login</a>
