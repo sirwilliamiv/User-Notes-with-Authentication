@@ -73,18 +73,7 @@ app.controller('RegisterCtrl', function($scope,$http) {
 })
 
 app.controller('NotesCtrl', function($scope,$http){
-  // $$http.get('firebase+uid', config).then(function() {
-  // $http.get(`list.json`)
-  // .then((stuff)=>{
-  //   console.log('stuff', stuff)
-  //   $scope.list = stuff.data.list
-
-  // })
-  //
-  console.log('abc')
-
   $scope.addToTheList = function(){
-
     $scope.savedNote.push($scope.newNote)
   }
 

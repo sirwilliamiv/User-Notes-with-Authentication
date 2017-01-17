@@ -1,1 +1,7 @@
 body { background-color: lightgrey; }
+
+input[type=textarea], textarea {
+  width: 60%;
+  min-height: 100%;
+
+}
