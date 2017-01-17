@@ -8,17 +8,40 @@ firebase.initializeApp({
   });
 
 
+//listens for changes  from login/signout
+// firebase.auth().onAuthStateChanged(function(){
+//
+//
+// })
+
+
+// Register
+// firebase.auth().createUserWithEmailAndPassword(email, password)
+
+// Login
+// // //login when hit login button
+// $('.login-page form').submit((e) => {
+//  var email = $('input[type="email"]').val()
+//  var password=$('input[type="password"]').val()
+
+//  firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+//   $('form')[0].reset()
+//  })
+//   e.preventDefault()
+// });
 
 
 
 
 
 
-
+//app
 
 var app = angular.module('noteApp',['ngRoute'])
 
-app.config(function($routeProvider) {
+//routes
+app.config(function($routeProvider, $locationProvider) {
+  $locationProvider.hashPrefix('')
   $routeProvider
   .when('/login', {
     conntroller:'LoginCtrl',
@@ -38,26 +61,23 @@ app.config(function($routeProvider) {
   })
 })
 
-
-app.controller('LoginCtrl', function($scope) {
-
-})
-
-app.controller('RegisterCtrl', function($scope) {
+//controllers
+app.controller('LoginCtrl', function($scope, $http) {
+  $scope.user =[]
 
 })
 
-app.controller('NotesCtrl',function($scope){
+app.controller('RegisterCtrl', function($scope,$http) {
+  $scope.user =[]
+
+})
+
+app.controller('NotesCtrl',function($scope,$http){
+  // $$http.get('firebase+uid', config).then(function() {
+  //
+  // }successCallback, errorCallback);
 
 
-  $scope.todos =[
-      {"name": "clean the house"},
-      {"name": "feed the dog"},
-      {"name": "shoot stuff"},
-      {"name": "coe"},
-      {"name": "misspelle thingsy"},
-      {"name": "jumpe"}
-      ]
 })
 app.controller('NewCtrl', function($scope) {
 
