@@ -1,3 +1,21 @@
+ // Initialize Firebase
+firebase.initializeApp({
+    apiKey: "AIzaSyCzTur6XdtgcbMF3WHHkYIVIgrlmYIcgGc",
+    authDomain: "usernotes-5d3cb.firebaseapp.com",
+    databaseURL: "https://usernotes-5d3cb.firebaseio.com",
+    storageBucket: "usernotes-5d3cb.appspot.com",
+    messagingSenderId: "391673845523"
+  });
+
+
+
+
+
+
+
+
+
+
 var app = angular.module('noteApp',['ngRoute'])
 
 app.config(function($routeProvider) {
