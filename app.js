@@ -36,8 +36,8 @@ firebase.initializeApp({
 
 
 //app
+const app = angular.module('noteApp',['ngRoute'])
 
-var app = angular.module('noteApp',['ngRoute'])
 
 //routes
 app.config(function($routeProvider, $locationProvider) {
@@ -74,7 +74,12 @@ app.controller('RegisterCtrl', function($scope,$http) {
 
 app.controller('NotesCtrl',function($scope,$http){
   // $$http.get('firebase+uid', config).then(function() {
-  //
+  $http.get(`list.json`)
+  .then((stuff)=>{
+    console.log('stuff', stuff)
+    $scope.list = stuff.data.list
+
+  })
   // }successCallback, errorCallback);
 
 
