@@ -44,19 +44,19 @@ app.config(function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('')
   $routeProvider
   .when('/login', {
-    conntroller:'LoginCtrl',
+    controller:'LoginCtrl',
     templateUrl: 'pages/login.html'
   })
   .when('/register', {
-    controler:'RegisterCtrl',
+    controller:'RegisterCtrl',
     templateUrl:'pages/register.html'
   })
   .when('/notes', {
-    controler:'NotesCtrl',
+    controller:'NotesCtrl',
     templateUrl:'pages/notes.html'
   })
   .when('/new', {
-    controler:'NewCtrl',
+    controller:'NewCtrl',
     templateUrl:'pages/new.html'
   })
 })
@@ -72,14 +72,23 @@ app.controller('RegisterCtrl', function($scope,$http) {
 
 })
 
-app.controller('NotesCtrl',function($scope,$http){
+app.controller('NotesCtrl', function($scope,$http){
   // $$http.get('firebase+uid', config).then(function() {
-  $http.get(`list.json`)
-  .then((stuff)=>{
-    console.log('stuff', stuff)
-    $scope.list = stuff.data.list
+  // $http.get(`list.json`)
+  // .then((stuff)=>{
+  //   console.log('stuff', stuff)
+  //   $scope.list = stuff.data.list
 
-  })
+  // })
+  //
+  console.log('abc')
+
+  $scope.addToTheList = function(){
+
+    $scope.savedNote.push($scope.newNote)
+  }
+
+  $scope.savedNote =[]
   // }successCallback, errorCallback);
 
 

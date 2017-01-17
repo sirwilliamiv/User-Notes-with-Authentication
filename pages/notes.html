@@ -1,5 +1,8 @@
-<h3>notes </h3>
+<h3>Notes </h3>
 {{ todos }}
 <label>New Note</label>
-<input type="textarea" rows="10" columns="50" name="notes" placeholder="New Note">
-<button>Save</button>
+<input ng-model="newNote" type="textarea" rows="10" columns="50" name="notes" placeholder="New Note">
+<button ng-click="addToTheList()">Save</button>
+<ul>
+  <li ng-repeat="saved in savedNote">{{saved}}</li>
+</ul>
