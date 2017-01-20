@@ -7,3 +7,12 @@
 <a href="#/new">New Note</a>
 <br><br>
 <a href="#/login">Back to Login</a>
+
+
+
+<ul ng-repeat="monkeybutt in mushrooms"> // THIS IS ARRAY
+      <li ng-repeat="(key, value) in monkeybutt"></li> //THIS  IS AN OBJECT
+{{key}}
+{{value.description}}
+{{value.edible}}
+</ul>
