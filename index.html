@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Notes</title>
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body ng-app="noteApp">
+  <div class="container">
+
+    <div ng-view></div>
+
+  </div>
+
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="factories/notefactory.js"></script>
+  <script src="controller/login.js"></script>
+  <script src="controller/new.js"></script>
+  <script src="controller/notes.js"></script>
+  <script src="controller/register.js"></script>
+</body>
+</html>
